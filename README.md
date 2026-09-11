@@ -1,7 +1,10 @@
 # Mew Item Framework
 A DLL dependency mod that allows other mods to add their own custom non-conflicting item sprite frames and inventory icons!
 
-> **Current support:** This framework applies to **equippable items and trinkets** (`weapon`, `head`, `neck`, `face`, `trinket`). For cat body parts and textures, see [**MewCatPartFramework**](https://www.nexusmods.com/mewgenics/mods/489).
+> [!IMPORTANT]
+> **Notice:** `MewItemFramework` functionality is officially integrated into [**MewCatPartFramework**](https://www.nexusmods.com/mewgenics/mods/489) (v1.4.0+). It is strongly recommended to use **MewCatPartFramework** instead, as it provides unified support for both custom cat body parts and custom item equipment in a single dependency without conflicts.
+
+> **Current support:** This standalone framework applies to **equippable items and trinkets** (`weapon`, `headItem`, `neckItem`, `faceItem`, `trinket`). For unified cat parts and item support, use [**MewCatPartFramework**](https://www.nexusmods.com/mewgenics/mods/489).
 
 # Making a Custom Item Mod
 
