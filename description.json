@@ -1,0 +1,8 @@
+{
+  "title": "MewItemFramework",
+  "description": "Dependency that allows other mods to add custom non-conflicting item sprite frames!",
+  "author": "Pseudonym_Tim & Zyrus",
+  "version": "1.0.0",
+  "url": "",
+  "requirements": []
+}

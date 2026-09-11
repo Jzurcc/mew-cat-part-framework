@@ -1,0 +1,4 @@
+LIBRARY MewItemFramework
+EXPORTS
+    MewItemFramework_Init
+    MewItemFramework_ResolvePart
