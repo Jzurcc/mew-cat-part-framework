@@ -1264,13 +1264,13 @@ static void* FindHiddenTextureDestination(void* application, const TextureTarget
 
         if (parentCharacterId != definition->expectedParentCharacterId)
         {
-            Log("Cannot route %s: newest %s export has character ID %d, expected %d", definition->target, definition->parentExport, parentCharacterId, definition->expectedParentCharacterId);
-            return NULL;
+            Log("Skipping %s in SWF index %d: export character ID is %d (expected %d for base catparts.swf)", definition->parentExport, index, parentCharacterId, definition->expectedParentCharacterId);
+            continue;
         }
 
         if (!EnsureBaseTextureTimelinesAligned(swf))
         {
-            return NULL;
+            continue;
         }
 
         hiddenTexture = g_findSwfCharacter((uint8_t*)swf + SWF_CHARACTER_TABLE_OFFSET, definition->hiddenTextureCharacterId);
@@ -1278,8 +1278,8 @@ static void* FindHiddenTextureDestination(void* application, const TextureTarget
 
         if (!hiddenTexture || hiddenFrames < definition->minimumBaseFrames)
         {
-            Log("Cannot route %s: hidden texture character %d under %s is invalid", definition->target, definition->hiddenTextureCharacterId, definition->parentExport);
-            return NULL;
+            Log("Cannot route %s: hidden texture character %d under %s is invalid in SWF index %d", definition->target, definition->hiddenTextureCharacterId, definition->parentExport, index);
+            continue;
         }
 
         return hiddenTexture;
